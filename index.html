@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="GMRD - Desenvolvimento de softwares personalizados. Transformamos suas ideias em realidade digital com tecnologia de ponta." />
+  <meta name="keywords" content="desenvolvimento web, software, GMRD, programação, React, TypeScript, aplicativos" />
+  <meta name="author" content="GMRD Systems" />
+  <title>GMRD | Desenvolvimento Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar">
+    <div class="container navbar-container">
+      <button class="logo-btn" onclick="scrollToTop()">
+        <img src="img/logo.png" alt="GMRD Logo" class="logo" />
+      </button>
+
+      <div id="navMenu" class="nav-menu">
+        <a href="#sobre" class="nav-link" onclick="scrollToSection('sobre')">Sobre</a>
+        <a href="#metodologia" class="nav-link" onclick="scrollToSection('metodologia')">Metodologia</a>
+        <a href="#equipe" class="nav-link" onclick="scrollToSection('equipe')">Equipe</a>
+        <a href="#portfolio" class="nav-link" onclick="scrollToSection('portfolio')">Portfólio</a>
+        <button class="btn-primary nav-cta" onclick="scrollToSection('contato')">
+          Contato
+        </button>
+      </div>
+
+      <button id="mobileMenuBtn" class="mobile-menu-btn">
+        <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg class="close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Substituir todo o hero section por esta nova estrutura -->
+  <section class="hero">
+    <div class="hero-decorations">
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+    </div>
+
+    <div class="container hero-container">
+      <!-- Conteúdo textual primeiro -->
+      <div class="hero-content reveal reveal-up">
+        <h1 class="hero-title">
+          <span id="typewriter"></span><span id="cursor" class="typewriter-cursor">|</span>
+        </h1>
+
+
+        <div class="hero-description">
+          <p>Desenvolvimento de softwares personalizados para empresas, e pessoas físicas, que buscam a concretização de
+            suas respectivas metas, concernentes as mais diversas vertentes.</p>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn-primary btn-large" onclick="scrollToSection('contato')">
+            Iniciar Projeto
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal reveal-up">
+        <img src="img/imghero1.png" alt="Ilustração representando desenvolvimento web" class="hero-image" />
+      </div>
+
+
+  </section>
+
+  <!-- About Section -->
+  <section id="sobre" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <h2 class="section-title">Sobre a GMRD</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-content reveal reveal-left">
+          <p>
+            A GMRD é uma Empresa Freelancer correlacionada a desenvolvimento
+            de softwares, focada em criar soluções web funcionais, escaláveis
+            e eficientes.
+          </p>
+          <p>
+            Com uma equipe jovem em desenvolvimento, transformamos desafios
+            complexos em produtos digitais úteis, intuitivos e visando sempre
+            um bom desempenho.
+          </p>
+        </div>
+
+        <div class="features-list reveal reveal-right">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="16,18 22,12 16,6"></polyline>
+                <polyline points="8,6 2,12 8,18"></polyline>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h4>Código Limpo</h4>
+              <p>Seguindo as práticas de desenvolvimento</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M12 3l1.2 3.7a1 1 0 0 0 .7.7L17.6 8.6l-3.7 1.2a1 1 0 0 0-.7.7L12 14.2l-1.2-3.7a1 1 0 0 0-.7-.7L6.4 8.6l3.7-1.2a1 1 0 0 0 .7-.7z">
+                </path>
+                <path d="M4.5 16.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z"></path>
+                <path d="M19.5 4.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z"></path>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h4>Códigos Personalizados</h4>
+              <p>Sem geração via softwares instantâneos</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                </path>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h4>Web Moderno</h4>
+              <p>Tecnologias de ponta visando boa performance</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <line x1="9" y1="1" x2="9" y2="4"></line>
+                <line x1="15" y1="1" x2="15" y2="4"></line>
+                <line x1="9" y1="20" x2="9" y2="23"></line>
+                <line x1="15" y1="20" x2="15" y2="23"></line>
+                <line x1="20" y1="9" x2="23" y2="9"></line>
+                <line x1="20" y1="14" x2="23" y2="14"></line>
+                <line x1="1" y1="9" x2="4" y2="9"></line>
+                <line x1="1" y1="14" x2="4" y2="14"></line>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h4>IA Aplicada</h4>
+              <p>Usamos IA para estruturação e organização do código</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h4>Responsivo</h4>
+              <p>Experiência perfeita em todos os dispositivos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Methodology Section -->
+  <section id="metodologia" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <h2 class="section-title">Metodologia adotada</h2>
+        <div class="section-divider"></div>
+        <p class="section-description">
+          Nossa equipe visa diretamente a praticabilidade de métodos que visam
+          o cliente como o centro da relação, o que significa, o uso de
+          metodologias ágeis, as quais seguem princípios que divergem de uma
+          execução inflexível do projeto, mas sim, que priorizam o constante
+          diálogo, sempre com o objetivo de satisfazer as demandas requeridas
+          pelo adquirente.
+        </p>
+      </div>
+
+      <div class="principles-grid">
+        <div class="card reveal reveal-up">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="card-title">Satisfaça o consumidor</h3>
+          <p class="card-description">
+            Prioridade é satisfazer o cliente, visando a exposição contínua do
+            andamento do software
+          </p>
+        </div>
+
+        <div class="card reveal reveal-up" style="animation-delay: 0.1s">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="9 11 12 14 22 4"></polyline>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+            </svg>
+          </div>
+          <h3 class="card-title">Aceite bem mudanças</h3>
+          <p class="card-description">
+            Mudanças nos requisitos são bem-vindas, mesmo tardiamente no
+            desenvolvimento
+          </p>
+        </div>
+
+        <div class="card reveal reveal-up" style="animation-delay: 0.2s">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </div>
+          <h3 class="card-title">Entregas frequentes</h3>
+          <p class="card-description">
+            Entregue software funcionando com frequência, de semanas a meses
+          </p>
+        </div>
+
+        <div class="card reveal reveal-up" style="animation-delay: 0.3s">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+          </div>
+          <h3 class="card-title">Atenção contínua</h3>
+          <p class="card-description">
+            Atenção contínua à técnica e ao bom design, aumenta a agilidade
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="equipe" class="section">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <h2 class="section-title">Nossa Equipe</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">
+          Conheça os profissionais por trás da GMRD
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card reveal reveal-up">
+          <div class="team-avatar">
+            <img src="img/Gabriel.jpg" alt="Gabriel Mendes" />
+          </div>
+
+          <h3 class="team-name">Gabriel Mendes</h3>
+          <p class="team-role">Desenvolvedor Full-Stack</p>
+          <p class="team-bio">
+            Atuo no desenvolvimento Full Stack, focado em aplicações web
+            modernas utilizando ferramentas e tecnologias consolidadas, com
+            foco em organização, versionamento e boas práticas. Trabalho com
+            React, TypeScript, Node.js, PHP (Laravel) e MySQL, aplicando
+            arquitetura bem definida, integração com APIs e controle de
+            versão, garantindo soluções estáveis, escaláveis e bem
+            estruturadas.
+          </p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/gabriel-mendes-a29796375/" target="_blank" rel="noopener noreferrer"
+              class="social-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://github.com/gabrielmendes15" target="_blank" rel="noopener noreferrer" class="social-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="team-card reveal reveal-up" style="animation-delay: 0.1s">
+          <div class="team-avatar">
+            <img src="img/Guilherme.jpg" alt="Guilherme Jorge">
+          </div>
+          <h3 class="team-name">Guilherme Jorge</h3>
+          <p class="team-role">Desenvolvedor Front-end</p>
+          <p class="team-bio">
+            Atualmente, já tive a oportunidade de contemplar diversas
+            vertentes relacionadas à área da Tecnologia, tanto na área do
+            front-end, isto é, consoante a sensatez com a estética, como
+            também na parte lógica, desenvolvendo, principalmente, a linguagem
+            JavaScript. Conheça-me mais acessando minhas redes abaixo.
+          </p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/guilherme-jorge-de-araujo-/" target="_blank" rel="noopener noreferrer"
+              class="social-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://github.com/GuilhermeJaraujo15" target="_blank" rel="noopener noreferrer"
+              class="social-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="section">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <h2 class="section-title">Portfólio</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">
+          Abaixo estão expostos alguns dos projetos feitos por nossa equipe
+        </p>
+      </div>
+
+      <div class="portfolio-scroll">
+        <div class="portfolio-card reveal reveal-up">
+          <div class="portfolio-bar"></div>
+          <div class="portfolio-content">
+            <h3 class="portfolio-title">E-commerce de Produtos In-Natura</h3>
+            <p class="portfolio-description">
+              Plataforma completa de vendas pela internet
+            </p>
+            <div class="portfolio-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JS</span>
+            </div>
+            <div class="portfolio-links">
+              <a href="#" class="portfolio-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Projeto
+              </a>
+              <a href="#" class="portfolio-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                Docs
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal reveal-up" style="animation-delay: 0.1s">
+          <div class="portfolio-bar"></div>
+          <div class="portfolio-content">
+            <h3 class="portfolio-title">Dashboard Analytics</h3>
+            <p class="portfolio-description">
+              Sistema de análise de dados em tempo real para tomada de
+              decisões
+            </p>
+            <div class="portfolio-tags">
+              <span class="tag">TypeScript</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+            </div>
+            <div class="portfolio-links">
+              <a href="#" class="portfolio-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Projeto
+              </a>
+              <a href="#" class="portfolio-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                Docs
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal reveal-up" style="animation-delay: 0.2s">
+          <div class="portfolio-bar"></div>
+          <div class="portfolio-content">
+            <h3 class="portfolio-title">App de Fitness</h3>
+            <p class="portfolio-description">
+              Aplicativo mobile para acompanhamento de treinos e nutrição
+            </p>
+            <div class="portfolio-tags">
+              <span class="tag">React Native</span>
+              <span class="tag">Firebase</span>
+            </div>
+            <div class="portfolio-links">
+              <a href="#" class="portfolio-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1-2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Projeto
+              </a>
+              <a href="#" class="portfolio-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                Docs
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Card -->
+        <div class="portfolio-card portfolio-cta reveal reveal-up" style="animation-delay: 0.3s">
+          <div class="portfolio-bar portfolio-bar-thick"></div>
+          <div class="portfolio-cta-content">
+            <div class="cta-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="16,18 22,12 16,6"></polyline>
+                <polyline points="8,6 2,12 8,18"></polyline>
+              </svg>
+            </div>
+            <h3>Seu Projeto Aqui</h3>
+            <p>
+              Pronto para transformar sua ideia em realidade? Entre em contato
+              conosco
+            </p>
+            <button class="btn-primary" onclick="scrollToSection('contato')">
+              Iniciar Projeto
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contato" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal reveal-up">
+        <h2 class="section-title">Entre em Contato</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">
+          Vamos conversar sobre seu projeto e como podemos ajudar
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal reveal-left">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <p>gmrdsystems@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+            </div>
+            <div>
+              <h4>Telefone</h4>
+              <p>+55 (11) 91137-4885</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div>
+              <h4>Localização</h4>
+              <p>São Paulo, Brasil</p>
+            </div>
+          </div>
+        </div>
+
+        <form id="contactForm" class="contact-form reveal reveal-right">
+          <p class="form-note">
+            Para maior praticidade, envie sua mensagem diretamente por este
+            formulário. Esta será encaminhada, já digitada, para o sistema de mensagens favorito selecionado, restanto
+            tão somente o envio.
+          </p>
+
+          <div class="form-group">
+            <input type="text" name="from_name" placeholder="Seu nome" required />
+          </div>
+
+          <div class="form-group">
+            <input type="email" name="reply_to" placeholder="Seu e-mail para contato" required />
+          </div>
+
+          <div class="form-group">
+            <textarea name="message" placeholder="Sua mensagem" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+            Enviar Mensagem
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-logo">
+        <img src="img/footer.png" alt="GMRD Logo" />
+      </div>
+
+      <p class="footer-copyright">
+        © 2025 GMRD. Todos os direitos reservados.
+      </p>
+
+      <div class="footer-social">
+        <a href="https://www.instagram.com/gmrdsystems/" target="_blank" rel="noopener noreferrer" class="social-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="social-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

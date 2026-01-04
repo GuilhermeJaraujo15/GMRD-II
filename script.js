@@ -78,6 +78,7 @@ window.addEventListener("scroll", () => {
 });
 
 // Typewriter Effect - Hero Title
+
 const text = "Transformamos Suas Ideias em Realidade Digital";
 const target = document.getElementById("typewriter");
 

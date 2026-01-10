@@ -489,67 +489,45 @@ svg {
 
 @media (max-width: 768px) {
 
-  /* Distância entre header e hero */
-  .hero {
-    padding-top: 5.7rem;
-    padding-bottom: 4.5rem;
-  }
-
-  /* Título com typewriter: mais respiro */
-  .hero-title {
-    margin-bottom: 1.75rem;
-    line-height: 1.25;
-  }
-
-  /* Texto descritivo */
-  .hero-description {
-    margin-bottom: 2rem;
-  }
-
-  /* Botão */
-  .hero-actions {
-    margin-bottom: 3rem;
-  }
-
-  /* Imagem do hero */
-  .hero-visual {
-    margin-bottom: 3rem;
-  }
-
-   /*  Corrige o layout do hero no mobile */
+  /* HERO passa a ser grid vertical */
   .hero-container {
+    display: grid;
     grid-template-columns: 1fr;
   }
 
-  /*  Ordem correta no mobile */
+  /* Remove o wrapper visualmente (sem quebrar desktop) */
   .hero-content {
+    display: contents;
+  }
+
+  /* Ordem correta */
+  .hero-title {
     order: 1;
-    text-align: center;
+  }
+
+  .hero-description {
+    order: 2;
   }
 
   .hero-visual {
-    order: 2;
+    order: 3;
+  }
+
+  /* Centraliza apenas o CTA no mobile */
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    order: 4;
     margin-top: 2rem;
   }
 
-  /*  Centraliza o botão no mobile */
-  .hero-content .btn-primary {
-    align-self: center;
+  /* Respiro entre botão e próxima seção */
+  .hero {
+    padding-bottom: 4rem;
   }
-
-  .hero-visual--gif {
-    transform: none;
-    margin-top: 2rem;
-  }
-
-  .hero-glow {
-    width: 200px;
-    height: 200px;
-    top: -30px;
-    right: -30px;
-  }
-
 }
+
+
 
 @media (max-width: 480px) {
   .hero-container {
@@ -1042,6 +1020,27 @@ svg {
 
 .portfolio-cta p {
   color: rgba(214, 217, 220, 0.7);
+}
+
+@media (max-width: 768px) {
+
+  .portfolio-carousel {
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+
+    /* Experiência mobile */
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+
+    /* Inibe scroll vertical residual */
+    touch-action: pan-x;
+  }
+
+    .portfolio-card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
 }
 
 /* ==================== */
